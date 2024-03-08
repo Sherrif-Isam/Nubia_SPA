@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --white: #ffffff;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+body.index-page {
+    font-family: "Sora", sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+h1,h2,h3,h4,h5,h6,
+.display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100% ;
+}
+
+
+.navbar{
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    width: 160px;
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn {
+    padding: 14px 18px;
+    border-width: 2px;
+    border-radius: 0;
+}
+
+.hero{
+    background-image: url(../images/cover2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(54, 84, 88, 0.8);
+    z-index: -1;
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 32px;
+    border-radius: 100px;
+    flex: none;
+}
+
+.service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.service::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+
+.service:hover .iconbox {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.service:hover h5,
+.service:hover p {
+    color: var(--white);;
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.col-img {
+    background-image: url(../images/christin-hume-0MoF-Fe0w0A-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+
+.portfolio {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 20, 51, 0.8);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.portfolio img {
+    transition: all 0.4s ease;   
+}
+
+.portfolio:hover .overlay{
+    opacity: 1;
+}
+
+.portfolio:hover img {
+    transform: scale(1.1);
+}
+
+
+.pricing i {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.pricing ul li {
+    margin-top: 8px;
+}
+
+form input.form-control {
+    height: 56px;
+}
+
+form .form-control {
+    border:#888;
+    border-radius: 100;
+    background-color: rgba(122, 14, 14, 0.02);
+}
+
+
+
+/* footer */
+
+.footer-top {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: var(--dark);
+}
+
+.footer-top a {
+    color: var(--body);
+}
+
+.footer-top a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    background-color: #242933;
+}
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--primary);
+    border-radius: 2px solid var(--primary);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: all 0.4s ease;
+    border: 2px solid var(--primary);
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--primarys);
+}
+
+
+
+#sign {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Corrected typo from '100wh' to '100vh' */
+    font-family: "jost", sans-serif; /* Corrected typo from "jost" to "Jost" */
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.main {
+    width: 350px;
+    height: 500px;
+    background: url(../images/cover.jpg) no-repeat center/cover;
+    overflow: hidden;
+}
+
+
+
+
+/* CSS for the booking.html page */
+
+.booking-page {
+    width: 100%;
+    height: 100%;
+    background-color: lightblue !important; 
+    color: black; 
+    font-size: 24px; 
+}
+
+
+.inner-layer{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    
+    overflow: auto;
+    
+}
+
+.form-data{
+    margin-top: 15%;
+    margin-bottom: 25%;
+    background-color: #fff;
+
+}
+
+.form-body{
+    padding: 20px;
+}
+
+.form-head{
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-head h2{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.form-row{
+    margin-bottom: 15px;
+}
+.no-margin{ 
+    margin: 0px;
+}
+
+.form-control{
+    background-color: #f7f7ff;
+}
+
+.form-control :focus{
+    box-shadow: none;
+    border: 3px solid #138496;
+}
+
+.btn-appointment{
+    background-color: #138496 !important;
+    border-color: #138496 !important;
+    width: 100%;
+
+}
+
+.content{
+    margin-top: 15%;
+    text-align: center;
+    color: #FFF;
+    padding: 30px;
+}
+
+.content h1{
+    font-weight: 600;
+    font-size: 3.5 rem;
+
+}
+
+.content p{
+    font-weight: 600;
+    font-size: 22 px;
+
+}
+.datepicker td, .datepicker th{
+    padding: 8px;
+}
+
+.dropdown-menu.datepicker{
+    max-width: 300px !important;
+}
+@ screen and (max-width: 976){
+
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&& */ 
+
+.content-wrapper {
+    min-height: calc(150vh - 100px); /* Adjust for footer height */
+    padding-bottom: 100px; /* Same as above */
+}
+
+
+
+
+
+
+
+
+
